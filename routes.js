@@ -1,0 +1,30 @@
+angular.module('assessment')
+.config(function($stateProvider, $urlRouterProvider){
+  $stateProvider
+    .state('home',{
+      url:'/',
+      templateUrl:'./views/home.html',
+      controller:'mainCtrl'
+    })
+    .state('blog',{
+      url:'/blog',
+      templateUrl:'./views/blog.html',
+      controller:'mainCtrl'
+    })
+    .state('pets',{
+      url:'/pet',
+      templateUrl:'./views/pets.html',
+      controller:'mainCtrl'
+    })
+    .state('about',{
+      url:'/about',
+      templateUrl:'./views/about.html',
+      controller:'mainCtrl'
+    })
+    .state('pet-bio',{
+      url:'/bio:obj',
+      templateUrl:'./views/pet-bio.html',
+      controller:'petCtrl'
+    });
+    $urlRouterProvider.otherwise("/");
+});
